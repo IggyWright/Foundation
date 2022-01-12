@@ -1,0 +1,256 @@
+/* Add font families */
+@font-face {
+    font-family: ClassicRomanStdRegular;
+    src: url(/fonts/ClassicRomanStdRegular/ClassicRomanStdRegular.otf);
+}
+
+@font-face {
+    font-family: ImperatorSmallCaps;
+    src: url(/fonts/ImperatorSmallCaps/ImperatorSmallCaps.ttf);
+}
+
+
+@font-face {
+    font-family: OPTIBakerDanmarkOne;
+    src: url(/fonts/OPTIBakerDanmarkOne/OPTIBakerDanmarkOne.otf);
+}
+
+@font-face {
+    font-family: PfefferMediaeval;
+    src: url(/fonts/PfefferMediaeval/PfefferMediaeval.otf);
+}
+
+/* Setup basics */
+html, body {
+    width: 100vw;
+    min-width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    min-height: -webkit-fill-available; /*mobile viewport bug fix*/
+    margin: 0;
+    padding: 0;
+    font-family: OPTIBakerDanmarkOne;
+
+    font-size: calc(16px + 1vmin);
+}
+
+/*****
+STYLING FOR REGULAR NAVIGATION
+*****/
+#navigation {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    min-height: 30px;
+    width: 100vw;
+    z-index: 2;
+    background-color: black;
+    color: ghostwhite;
+}
+
+/* Logo styling FOR BOTH DROP DOWN AND NORMAL*/
+.logoContainer {
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logoImage {
+    height: calc(100% - 4px);
+    margin: 0 2px;
+}
+
+.logoText {
+    font-size: calc(28px + 1vmin);
+    color: #be8d62;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: ghostwhite;
+
+}
+
+/* Style the link container for regular nav menu */
+#navLinks {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Style containers */
+#navigation ul{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    list-style-type: none;
+}
+
+#navigation ul li {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    max-width: 20%;
+}
+
+/* Style regular navigation link elements */
+#navigation .navCell{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10px;
+    height: 100%;
+    font-size: calc(12px + 1vh);
+    color: ghostwhite;
+    font-weight: bold;
+}
+
+#navigation #active.navCell {
+    color: black;
+    background-color: #be8d62;
+}
+
+/*****
+STYLING FOR DROPDOWN NAVIGATION
+*****/
+#dropdownNavigation {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    z-index: 2;
+}
+
+/* Style the dropdown navigation menu heading*/
+#dropdownNavHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    min-height: 30px;
+    z-index: 2;
+    background-color: black;
+    color: ghostwhite;
+
+    /* font-size: 3vmin; */
+}
+
+#dropdownNavController {
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+#dropdownNavButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(16px + 1.25vh);
+}
+
+#dropdownNavText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(8px + 1.25vh);
+}
+
+/* Style dropdown nav links and container */
+#dropdownNavLinks {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 10vh;
+    left: 0;
+    display: none;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+#dropdownNavLinksContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 60%;
+}
+
+/* Style the dropdown nav containers */
+#dropdownNavLinks ul {
+    height: 100%;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#dropdownNavLinks ul li {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdownNavCell {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-size: 5vmin;
+    color: ghostwhite;
+    font-weight: bold;
+    background-color: black;
+}
+
+#dropdownNavLinks #active.dropdownNavCell {
+    color: black;
+    background-color: #be8d62;
+}
+
+/*All hover effects when valid */
+@media (hover: hover) {
+    #navigation .navCell:hover:not(#active) {
+        color: black;
+        background-color: ghostwhite;
+    }
+
+    #dropdownNavLinks .dropdownNavCell:hover:not(#active) {
+        color: black;
+        background-color: ghostwhite;
+    }
+}
+
+/*When our screen is portrait or width is less than 500px we switch navigation to dropdownNavigation*/
+@media all and (orientation: portrait),
+(max-width: 1000px) {
+    #navigation {
+        display: none;
+    }
+
+    #dropdownNavigation {
+        display: flex;
+    }
+}

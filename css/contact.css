@@ -1,0 +1,202 @@
+#contactWidget {
+    position: absolute;
+    top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    overflow-x: hidden;
+    font-size: calc(12px + 1vmin);
+}
+
+.title {
+    margin-top: 10px;
+    width: 90%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: calc(12px + 1.25vmin);
+    min-height: 25px;
+}
+
+#successMessage {
+    margin-top: 10px;
+    width: 90%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(12px + 1.25vmin);
+    color: #42cd80;
+    min-height: 25px;
+}
+
+#errorMessage {
+    margin-top: 10px;
+    width: 90%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(12px + 1.25vmin);
+    color: red;
+    min-height: 25px;
+}
+
+#infoContainer,
+#formContainer {
+    width: 80%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px 0;
+    min-height: 250px;
+}
+
+.infoRow {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.infoTitle {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.infoDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #be8d62;
+    text-decoration: none;
+    line-height: 1.25;
+}
+
+.socialImage {
+    height: 5vh;
+    min-height: 35px;
+    margin-top: 10px;
+}
+
+#formContainer {
+    background-color: ghostwhite;
+    border: solid #be8d62 2px;
+    border-radius: 7px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70vh;
+    font-size: calc(12px + 1vmin);
+}
+
+.formRow {
+    width: 100%;
+    height: 7vh;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rowTitle {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.rowInput {
+    width: 70%;
+    height: 80%;
+    color: #be8d62;
+    border: solid #be8d62 2px;
+    border-radius: 5px;
+}
+
+.rowInput::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red;
+  opacity: 1; /* Firefox */
+}
+
+.rowInput:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: red;
+}
+
+.rowInput::-ms-input-placeholder { /* Microsoft Edge */
+  color: red;
+}
+
+.formColumn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#messageTitle {
+    width: 100%;
+    height: 7vh;
+}
+
+#messageTextArea {
+    width: calc(100% - 10px);
+    height: 90%;
+    color: #be8d62;
+    resize: none;
+    border: solid #be8d62 2px;
+    border-radius: 5px;
+}
+
+#messageTextArea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red;
+  opacity: 1; /* Firefox */
+}
+
+#messageTextArea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: red;
+}
+
+#messageTextArea::-ms-input-placeholder { /* Microsoft Edge */
+  color: red;
+}
+
+#sendMessageButton {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #be8d62;
+    font-weight: bolder;
+    border: solid black 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 30%;
+}
+
+/*For hover effect */
+@media (hover: hover) {
+    #sendMessageButton:hover:not(#active) {
+        background-color: ghostwhite;
+    }
+
+}

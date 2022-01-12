@@ -1,0 +1,12 @@
+#unknownWidget {
+    position: absolute;
+    top: 10vh;
+    height: 90%;
+    color: #be8d62;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    font-size: calc(32px + 1vmin);
+}

@@ -1,0 +1,112 @@
+#teamWidget {
+    position: absolute;
+    top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#teamContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+
+}
+
+.individualMember {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 90vh;
+    margin-bottom: 20px;
+}
+
+.individualMember:nth-child(odd) {
+    background-color: ghostwhite;
+}
+
+.memberInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+}
+
+.teamImage {
+    height: auto;
+    min-height: 75px;
+    max-height: 80%;
+    max-width: 90vw;
+}
+
+.nameLabel {
+    height: 10%;
+    font-size: 6vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+}
+
+.description::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.15);
+    background-color: white;
+}
+
+.description::-webkit-scrollbar
+{
+    width: 5px;
+    height: 100%;
+    background-color: white;
+}
+
+.description::-webkit-scrollbar-thumb
+{
+    background-color: #be8d62;
+}
+
+.noDescriptionMember {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(70vh - 40px);
+    margin: 20px;
+}
+
+.remainingTeamContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+}
+
+/*When our screen is portrait or width is less than 500px we switch navigation to dropdownNavigation*/
+@media all and (orientation: portrait),
+(max-width: 975px) {
+    .individualMember {
+        flex-direction: column;
+    }
+
+    .memberInfo {
+        height: 50%;
+        width: 100%;
+    }
+}

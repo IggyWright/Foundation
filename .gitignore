@@ -1,0 +1,2 @@
+#ignore our config file of passwords and user info
+.env

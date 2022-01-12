@@ -1,0 +1,10 @@
+{
+  "autoload": {
+    "psr-4": {"Foundation\\": "lib/Foundation"}
+  },
+  "require": {
+      "vlucas/phpdotenv": "^5.2",
+      "phpmailer/phpmailer": "^6.2",
+      "league/oauth2-google": "^3.0"
+  }
+}
