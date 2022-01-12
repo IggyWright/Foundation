@@ -7,7 +7,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 //load the dotenv for using passwords
 use Dotenv\Dotenv;
-$dotenv = Dotenv::createImmutable(__DIR__ . "/..");
+$dotenv = Dotenv::createImmutable(__DIR__ . "/../");
 $dotenv->load();
 
 //Instantiate the site

@@ -1,3 +1,0 @@
-MAILER_USERNAME = "EMAIL@email.com"
-MAILER_PASSWORD = "password"
-GOOGLE_MAPS_API_KEY = "googleapirandomletters"
