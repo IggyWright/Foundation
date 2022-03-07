@@ -9,7 +9,7 @@ class UnknownView extends View{
         //add our nav links
         $this->addLink("index.php", "About the Salon");
         $this->addLink("services.php", "Services & Pricing");
-        $this->addLink("team.php", "Meet Our Team");
+        // $this->addLink("team.php", "Meet Our Team");
         $this->addLink("gallery.php", "Gallery / Portfolio");
         $this->addLink("contact.php", "Contact Us");
 
